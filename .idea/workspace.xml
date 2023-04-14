@@ -4,17 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea05a3c2-4943-46ab-b4a3-0b85aab43260" name="Changes" comment="ADD index show">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/model/CrudMessage.java" afterDir="false" />
+    <list default="true" id="ea05a3c2-4943-46ab-b4a3-0b85aab43260" name="Changes" comment="ADD complete crud">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/controller/CategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/categories/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/controller/PhotoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/controller/PhotoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/model/Photo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/model/Photo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/service/PhotoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/service/PhotoService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/import.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/photos/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/photos/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/photos/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/photos/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/photos/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/photos/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/photos/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/photos/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,8 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -99,13 +93,21 @@
       <option name="project" value="LOCAL" />
       <updated>1681393688055</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="ADD complete crud">
+      <created>1681462062851</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681462062851</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init with photo e catogory" />
     <MESSAGE value="ADD many to many" />
     <MESSAGE value="ADD index show" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD index show" />
+    <MESSAGE value="ADD complete crud" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD complete crud" />
   </component>
 </project>
