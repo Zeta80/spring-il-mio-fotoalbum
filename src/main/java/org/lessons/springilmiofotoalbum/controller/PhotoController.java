@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.lessons.springilmiofotoalbum.exeption.PhotoNotFoundException;
+import org.lessons.springilmiofotoalbum.model.CrudMessage;
 import org.lessons.springilmiofotoalbum.model.Photo;
 import org.lessons.springilmiofotoalbum.service.CategoryService;
 import org.lessons.springilmiofotoalbum.service.PhotoService;
@@ -64,5 +65,69 @@ public class PhotoController {
         }
 
 
+    //CREATE
+    @GetMapping("/create")
+    public String create(Model model){
+        model.addAttribute("photo", new Photo());
+        //associo al model di photo un attributo Listacategoria con tutte le categorie prese dal metodo getAll nel service
+        model.addAttribute("categoryList", categoryService.getAll());
+        return "/photos/create";
     }
+
+    @PostMapping("/create")
+    public String doCreate(@Valid @ModelAttribute("photo") Photo formPhoto, BindingResult br, RedirectAttributes redirectAttributes, Model model){
+        if(br.hasErrors()){
+            model.addAttribute("categoryList", categoryService.getAll());
+            return "/photos/create";
+        }
+        redirectAttributes.addFlashAttribute("message", new CrudMessage(CrudMessage.CrudMessageType.SUCCESS, "New Photo successfully created"));
+        photoService.createPhoto(formPhoto);
+        return "redirect:/photos";
+    }
+
+
+    @GetMapping("/edit/{id}")
+    public String edit(@PathVariable Integer id, Model model) {
+        try{
+            Photo photo = photoService.getById(id);
+            model.addAttribute("photo", photo);
+            model.addAttribute("categoryList", categoryService.getAll());
+            return "/photos/edit";
+
+        }catch (PhotoNotFoundException e){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @PostMapping("/edit/{id}")
+    public String doEdit(@PathVariable Integer id, @Valid @ModelAttribute("photo") Photo formPhoto, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()){
+            return "/photos/edit";
+
+        }
+        try{
+            Photo updatedPhoto = photoService.updatePhoto(formPhoto, id);
+            return "redirect:/photos/" + Integer.toString(updatedPhoto.getId());
+
+        }catch (PhotoNotFoundException e){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
+    }
+
+    @GetMapping("/delete/{id}")
+    public String delete(@PathVariable Integer id){
+        try{
+            boolean success = photoService.deleteById(id);
+            if (success)
+                return "redirect:/photos";
+            else
+                throw new ResponseStatusException(HttpStatus.INTERNAL_SERVER_ERROR);
+
+        }catch (PhotoNotFoundException e){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND);
+        }
+    }
+
+
+}
 

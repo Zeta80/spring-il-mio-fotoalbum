@@ -16,32 +16,47 @@
 
     <h2>Aggiungere un Foto  <a th:href="@{/photos/create}" class="btn btn-success rounded-circle" title="add photo">CREAMI</a></h2>
 
-    <table class="table">
+    <table>
         <thead>
         <tr>
-            <th>id</th>
-            <th>Titolo</th>
-            <th>Descrizione</th>
-            <th></th>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Image</th>
+            <th>Actions</th>
+
         </tr>
         </thead>
-
         <tbody>
         <tr th:if="${!list.isEmpty()}" th:each="photo : ${list}" th:object="${photo}">
             <td th:text="*{id}"></td>
             <td th:text="*{title}"></td>
             <td th:text="*{description}"></td>
+            <td > <img style="max-height: 50px;" th:src="*{url}" > </td>
             <td>
-                <a th:href="@{|/photos/*{id}|}" class="btn btn-primary btn-sm" title="detail">Detail</a>
-                <a th:href="@{|/photos/edit/*{id}|}" class="btn btn-primary btn-sm" title="edit">Edit</a>
+
+                <a th:href="@{|/photos/*{id}|}">
+                    Dettagli
+                </a>
+
+                <a th:href="@{|/photos/edit/*{id}|}" >
+                    <!-- sec:authorize="hasAuthority('ADMIN')" -->
+                    Edita
+                </a>
+
+                <a th:href="@{|/photos/delete/*{id}|}">
+                    <!--  sec:authorize="hasAuthority('ADMIN')"   -->
+                    Cancella
+                </a>
+
+
             </td>
 
         </tr>
         <tr th:if="${list.isEmpty()}">
-            <td colspan="4">Sorry, there aren't pizzas available</td>
+            <td colspan="4">nessuna foto disponibile</td>
         </tr>
         </tbody>
-
     </table>
 </div>
 

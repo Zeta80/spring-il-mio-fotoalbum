@@ -13,22 +13,35 @@
 <div th:replace="~{fragments/navbar :: navbar}"></div>
 
 <div class="container" th:object="${photo}">
-  <h1 >Foto</h1>
+  <h1 th:text="*{title}">Photos</h1>
   <hr/>
   <div>
     <dl>
-      <dt>Titolo</dt>
+      <dt>Title:</dt>
       <dd th:text="*{title}"></dd>
 
+      <th:block th:unless="${#strings.isEmpty(photo.description)}">
+        <dt>Description:</dt>
+        <dd th:text="*{description}"></dd>
+      </th:block>
 
-      <dt>Descrizione</dt>
-      <dd th:text="*{description}"></dd>
+      <dt>Image: </dt>
+      <dd>
+        <img th:src="*{url}">
+      </dd>
+
+      <dt>Visible:</dt>
+      <dd th:if="*{visible}">Yes</dd>
+      <dd th:unless="*{visible}">No</dd>
+
+      <dt>Category: </dt>
+      <dd><span th:each="category : *{categories}" th:text="${category.name}" class="me-1"></span></dd>
 
     </dl>
   </div>
 
   <div>
-    <a th:href="@{/}"> Back to pizzas menu </a>
+    <a th:href="@{/photos}"> Back to photos menu </a>
   </div>
 
 </div>

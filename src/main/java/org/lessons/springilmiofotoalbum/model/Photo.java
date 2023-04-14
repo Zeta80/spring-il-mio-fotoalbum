@@ -28,12 +28,18 @@ public class Photo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @NotEmpty
+    @NotEmpty(message = "il titolo deve contenere della consistenza")
     private String title;
-    @NotEmpty
+    @NotEmpty(message = "la descrizione non può essere eterea ")
+    @Size(min = 5 ,max = 250, message = "la descrizione deve essere tipo tra 5 caratteri fino a 250" )
+    @Lob
     private String description;
-    @NotEmpty
-    private Boolean visible;
+
+    @NotEmpty(message = "è un sito di foto, metti sta foto")
+    @Column(nullable = false)
+    private String url;
+    @NotNull
+    private boolean visible;
 
     @ManyToMany
     @JoinTable(
@@ -48,6 +54,14 @@ public class Photo {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public String getTitle() {
@@ -66,11 +80,11 @@ public class Photo {
         this.description = description;
     }
 
-    public Boolean getVisible() {
+    public boolean isVisible() {
         return visible;
     }
 
-    public void setVisible(Boolean visible) {
+    public void setVisible(boolean visible) {
         this.visible = visible;
     }
 
