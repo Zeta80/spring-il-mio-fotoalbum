@@ -4,17 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea05a3c2-4943-46ab-b4a3-0b85aab43260" name="Changes" comment="PUSH api and mailbox">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/controller/MailboxMessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/controller/MailboxMessageController.java" afterDir="false" />
+    <list default="true" id="ea05a3c2-4943-46ab-b4a3-0b85aab43260" name="Changes" comment="ADD category crud">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/model/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/security/DatabaseUserDetailService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/security/DatabaseUserDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/security/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/model/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/import.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -29,16 +41,12 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
   </component>
-  <component name="ProjectId" id="2OQ8icG00bbDZksqgYujSXK31SN" />
+  <component name="ProjectId" id="2OMgpOgcT40jro76QBFHbrAn6rh" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -46,45 +54,73 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;G:/boolean precorso/CORSO BOOLEAN JAVA/spring-il-mio-fotoalbum-master&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "G:/boolean precorso/CORSO BOOLEAN JAVA/spring-il-mio-fotoalbum-2",
+    "settings.editor.selected.configurable": "project.propCompiler"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\boolean precorso\CORSO BOOLEAN JAVA\spring-il-mio-fotoalbum-2\src\main\resources\templates" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ea05a3c2-4943-46ab-b4a3-0b85aab43260" name="Changes" comment="ADD security" />
-      <created>1681481574308</created>
+      <changelist id="ea05a3c2-4943-46ab-b4a3-0b85aab43260" name="Changes" comment="" />
+      <created>1681376049812</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1681481574308</updated>
+      <updated>1681376049812</updated>
     </task>
-    <task id="LOCAL-00001" summary="PUSH api and mailbox">
-      <created>1681734515814</created>
+    <task id="LOCAL-00001" summary="init with photo e catogory">
+      <created>1681379001537</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1681734515814</updated>
+      <updated>1681379001537</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="ADD many to many">
+      <created>1681380027016</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1681380027016</updated>
+    </task>
+    <task id="LOCAL-00003" summary="ADD index show">
+      <created>1681393688055</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1681393688055</updated>
+    </task>
+    <task id="LOCAL-00004" summary="ADD complete crud">
+      <created>1681462062851</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1681462062851</updated>
+    </task>
+    <task id="LOCAL-00005" summary="ADD category crud">
+      <created>1681468851138</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1681468851138</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="PUSH api and mailbox" />
-    <option name="LAST_COMMIT_MESSAGE" value="PUSH api and mailbox" />
+    <MESSAGE value="init with photo e catogory" />
+    <MESSAGE value="ADD many to many" />
+    <MESSAGE value="ADD index show" />
+    <MESSAGE value="ADD complete crud" />
+    <MESSAGE value="ADD category crud" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADD category crud" />
   </component>
 </project>

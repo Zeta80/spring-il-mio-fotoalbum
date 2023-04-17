@@ -19,6 +19,7 @@ public class PhotoService {
         return photoRepository.findAll(Sort.by("id"));
     }
 
+<<<<<<< HEAD
     public List<Photo> getAllVisiblePhotos() {
         return photoRepository.findByVisibleTrue();
     }
@@ -29,6 +30,11 @@ public class PhotoService {
     public List<Photo> getAllFilteredVisiblePhotos(String keyword){
         return photoRepository.findByTitleContainingIgnoreCaseAndVisibleTrue(keyword);
     }
+=======
+    public List<Photo> getFilteredPhotos(String keyword) {
+        return photoRepository.findByTitleContainingIgnoreCase(keyword);
+    }
+>>>>>>> origin/master
 
     public Photo getById(Integer id) throws PhotoNotFoundException {
         Optional<Photo> result = photoRepository.findById(id);
@@ -68,6 +74,7 @@ public class PhotoService {
             return false;
         }
     }
+<<<<<<< HEAD
 
 
 
@@ -76,3 +83,6 @@ public class PhotoService {
 
 }
 
+=======
+}
+>>>>>>> origin/master
