@@ -22,13 +22,11 @@ public class Category {
     private String description;
 
     //RELATIONS
-
     @JsonIgnore
     @ManyToMany(mappedBy = "categories")
     private List<Photo> photos;
 
     //GETTER & SETTER
-
     public Integer getId() {
         return id;
     }

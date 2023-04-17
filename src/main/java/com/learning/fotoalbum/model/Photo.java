@@ -16,23 +16,19 @@ public class Photo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
     @NotEmpty(message = "The title can not be empty :(")
     private String title;
-
     @NotEmpty(message = "Text can not be empty :( ")
     @Size(min = 5 ,max = 250, message = "The text must be greater than 5 and smaller than 250 characters :(" )
     @Lob
     private String description;
-
     @NotEmpty(message = "Need to upload a photo :(")
     @Column(nullable = false)
     private String url;
-
     @NotNull(message = "Need to make a choice :(")
     private boolean visible;
 
-    //RELATIONS
+    //REATIONS
     @ManyToMany
     @JoinTable(
             name = "photos_categories",
@@ -41,7 +37,6 @@ public class Photo {
     private List<Category> categories;
 
     //GETTER & SETTER
-
     public Integer getId() {
         return id;
     }

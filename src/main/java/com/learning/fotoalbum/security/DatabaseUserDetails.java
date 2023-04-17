@@ -28,7 +28,6 @@ public class DatabaseUserDetails implements UserDetails {
     }
 
     //USERDETAILS
-
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return authorities;

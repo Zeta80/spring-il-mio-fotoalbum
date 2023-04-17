@@ -20,7 +20,6 @@ public class MailboxMessage {
     private String content;
 
     //GETTER & SETTER
-
     public Integer getId() {
         return id;
     }
