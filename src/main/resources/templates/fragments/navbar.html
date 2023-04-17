@@ -6,8 +6,8 @@
 </head>
 <body>
 <th:block th:fragment="navbar(current, keyword, showSearch)">
-  <nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
+  <nav class="navbar navbar-expand-lg" >
+    <div class="container-fluid" >
       <a class="navbar-brand" th:href="@{/}">Home</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -15,13 +15,17 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" th:href="@{/photos} " th:classAppend="${current == 'photos'} ? active : not-active">My Foto</a>
+            <a class="nav-link" th:href="@{/photos} " th:classAppend="${current == 'photos'} ? active : not-active">My photos</a>
           </li>
 
          <li class="nav-item">
             <a class="nav-link" th:href="@{/categories}"
                th:classAppend="${current == 'categories'} ? active : not-active" sec:authorize="hasAuthority('ADMIN')">Categories</a>
+          </li>
 
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/mailbox}"
+               th:classAppend="${current == 'mailbox'} ? active : not-active" sec:authorize="hasAuthority('ADMIN')">Mailbox</a>
           </li>
 
         </ul>
@@ -33,13 +37,14 @@
               th:action="@{/photos}"
         >
 
-          <input name="keyword" th:value="${keyword}" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <!--colleghiamo il parametro del fragment all'attribute th:value dell'input che si collegherà al controller-->
+          <input name="keyword" th:value="${keyword}" class="form-control me-2" type="search" placeholder="Search by title" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
 
-        <div class="ms-3">
-          <span sec:authentication="name"></span>
-          <span sec:authentication="authorities"></span>
+        <div class="ms-3" >
+          <span sec:authentication="name" style="color: black;"></span>
+          <span sec:authentication="authorities" style="color: green;"></span>
 
           <a class="btn btn-danger" th:href="@{/logout}">Logout</a>
         </div>

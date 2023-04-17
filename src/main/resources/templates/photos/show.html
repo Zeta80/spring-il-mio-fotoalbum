@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <div th:replace="~{fragments/link :: link}"></div>
 
-  <title>Dettagli Foto</title>
+  <title>Photo Detail</title>
 </head>
-<body>
+<body >
 
 <header th:replace="~{fragments/navbar :: navbar('photos', '', false)}"></header>
 
 <div th:replace="~{fragments/message :: message}" ></div>
   <div class="container" th:object="${photo}">
-    <h1 th:text="*{title}">Foto</h1>
+    <h1 th:text="*{title}">Photos</h1>
     <hr/>
     <div>
       <dl>
@@ -24,7 +24,7 @@
           <dd th:text="*{description}"></dd>
         </th:block>
 
-        <dt>Immagine: </dt>
+        <dt>Foto: </dt>
         <dd>
           <img th:src="*{url}">
         </dd>
@@ -33,14 +33,14 @@
         <dd th:if="*{visible}">Yes</dd>
         <dd th:unless="*{visible}">No</dd>
 
-        <dt>Categoria: </dt>
+        <dt>Categorie: </dt>
         <dd><span th:each="category : *{categories}" th:text="${category.name}" class="me-1"></span></dd>
 
       </dl>
     </div>
 
     <div>
-      <a th:href="@{/photos}"> torna la menu foto </a>
+      <a th:href="@{/photos}"> Torna indietro </a>
     </div>
 
   </div>

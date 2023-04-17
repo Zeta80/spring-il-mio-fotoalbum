@@ -9,57 +9,52 @@
   <title>Photos</title>
 </head>
 
-<body>
+<body >
 <header th:replace="~{fragments/navbar :: navbar('photos', ${keyword}, true)}"></header>
 
 <main>
   <div class="container">
     <h3 th:text="|Hi ${loggedUser.firstName}|"></h3>
 
-    <h1>FOTO</h1>
+    <h1>Album
 
-    <a th:href="@{/photos/create}" class="btn btn-success " title="add photo" sec:authorize="hasAuthority('ADMIN')">
+    <a th:href="@{/photos/create}" class="btn btn-success " title="Add new photo" sec:authorize="hasAuthority('ADMIN')">
       <i class="fa-solid fa-plus"></i>
     </a>
+
+    </h1>
+
 
     <div th:replace="~{fragments/message :: message}" ></div>
 
     <table>
-      <thead>
+      <thead class="gx-3">
       <tr>
-        <th>Id</th>
+        <th>id°</th>
         <th>Titolo</th>
-        <th>Descrizione</th>
-        <th>Immagine</th>
+        <th>Foto</th>
         <th>Azioni</th>
 
       </tr>
       </thead>
-      <tbody>
+      <tbody class="gx-3">
       <tr th:if="${!list.isEmpty()}" th:each="photo : ${list}" th:object="${photo}">
         <td th:text="*{id}"></td>
         <td th:text="*{title}"></td>
-        <td th:text="*{description}"></td>
         <td style="max-height: 50px;"> <img th:src="*{url}" > </td>
         <td>
 
-          <a th:href="@{|/photos/*{id}|}">
-            <i class="fa-solid fa-eye"></i>
-          </a>
+          <a th:href="@{|/photos/*{id}|}" class="text-info"><i class="fa-solid fa-eye"></i></a>
 
-          <a th:href="@{|/photos/edit/*{id}|}" sec:authorize="hasAuthority('ADMIN')">
-          <i class="fa-solid fa-pencil"></i>
-          </a>
+          <a th:href="@{|/photos/edit/*{id}|}" sec:authorize="hasAuthority('ADMIN')" class="text-warning"><i class="fa-solid fa-pencil" ></i></a>
 
-          <a th:href="@{|/photos/delete/*{id}|}" sec:authorize="hasAuthority('ADMIN')">
-            <i class="fa-solid fa-trash"></i>
-          </a>
+          <a th:href="@{|/photos/delete/*{id}|}" sec:authorize="hasAuthority('ADMIN')" class="text-danger"><i class="fa-solid fa-trash"></i></a>
 
         </td>
 
       </tr>
       <tr th:if="${list.isEmpty()}">
-        <td colspan="4"> Scusa, nessuna foto da mostrare</td>
+        <td colspan="4"> Mi dispiace, nessuna foto</td>
       </tr>
       </tbody>
     </table>

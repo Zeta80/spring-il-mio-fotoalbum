@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>org.excercise.pizzeria</groupId>
-	<artifactId>spring-la-mia-pizzeria-crud</artifactId>
+	<artifactId>spring-il-mio-fotoalbum</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>spring-la-mia-pizzeria-crud</name>
 	<description>Demo project for Spring Boot</description>

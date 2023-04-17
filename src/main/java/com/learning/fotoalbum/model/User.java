@@ -8,6 +8,7 @@ import java.util.Set;
 @Entity
 @Table(name= "users")
 public class User {
+    //ATTRIBUTES / COLUMNS
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer Id;
@@ -22,8 +23,12 @@ public class User {
     @Column(nullable = false)
     private String password;
 
+    //RELATIONS
     @ManyToMany(fetch = FetchType.EAGER)
+    //usiamo fetch in modo che appena venga selezionato un utente devono vengano subito selezionati i suoi ruoli
     private Set<Role> roles;
+
+    //GETTER & SETTER
 
     public Integer getId() {
         return Id;

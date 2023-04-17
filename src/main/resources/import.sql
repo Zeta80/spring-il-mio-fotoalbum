@@ -1,3 +1,4 @@
+
 INSERT INTO photos (title, description, url, visible) VALUES('Photo 1', 'la foto number 1', 'https://i.ytimg.com/vi/lPOrjROuheY/maxresdefault.jpg', 1);
 INSERT INTO photos (title, description, url, visible) VALUES('Photo 2', 'la foto number 2', 'https://i.ytimg.com/vi/_7Mgb7xK3Dk/maxresdefault.jpg', 1);
 

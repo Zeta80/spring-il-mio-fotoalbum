@@ -9,6 +9,8 @@ import java.util.List;
 @Entity
 @Table(name = " categories")
 public class Category {
+
+    //ATTRIBUTES / COLUMNS
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -19,11 +21,13 @@ public class Category {
 
     private String description;
 
+    //RELATIONS
 
     @JsonIgnore
     @ManyToMany(mappedBy = "categories")
     private List<Photo> photos;
 
+    //GETTER & SETTER
 
     public Integer getId() {
         return id;

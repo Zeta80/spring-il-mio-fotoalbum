@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <div th:replace="~{fragments/link :: link}"></div>
+
+  <title>MailBox</title>
+</head>
+<body  class="bg-dark text-light">
+  <header th:replace="~{fragments/navbar :: navbar('mailbox', '', false)}"></header>
+  <main class="container">
+
+    <h1>Mailbox</h1>
+
+    <div class="container py-5">
+      <div class="row mb-3" th:if="${messages != null}">
+        <div class="col" th:each="message : ${messages}">
+          <div class="card bg-secondary">
+            <div class="card-body">
+              <h5 class="card-title" th:text="|From: ${message.email}|"></h5>
+              <p th:text="|Message: ${message.content}|"></p>
+              <div class="d-flex">
+                <a th:href="@{|/mailbox/${message.id}|}" class="card-link text-info"><i class="fa-solid fa-eye"></i></a>
+                <a th:href="@{|/mailbox/delete/${message.id}|}" class="card-link text-danger mx-5"><i class="fa-solid fa-trash"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 th:unless="${messages != null}">Ancora nulla :( </h2>
+    </div>
+  </main>
+</body>
+</html>

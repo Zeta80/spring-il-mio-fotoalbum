@@ -16,6 +16,8 @@ import java.util.Optional;
 public class CategoryService {
     @Autowired
     private CategoryRepository categoryRepository;
+
+    //GETTER BY ID
     public Category getById(Integer id) throws CategoryNotFoundException {
         Optional<Category> result = categoryRepository.findById(id);
         if (result.isPresent()) {
@@ -25,10 +27,12 @@ public class CategoryService {
         }
     }
 
+    //INDEX
     public List<Category> getAll(){
         return categoryRepository.findAll(Sort.by("name"));
     }
 
+    //CREATE
     public Category create(Category formCategory) {
         Category categoryToPersist = new Category();
         categoryToPersist.setName(formCategory.getName());
@@ -36,6 +40,7 @@ public class CategoryService {
         return categoryRepository.save(categoryToPersist);
     }
 
+    //EDIT
     public Category update(Category formCategory) {
         Category categoryToUpdate = new Category();
         categoryToUpdate.setName(formCategory.getName());
@@ -43,6 +48,7 @@ public class CategoryService {
         return categoryRepository.save(formCategory);
     }
 
+    //DELETE
     public boolean deleteById(Integer id) throws CategoryNotFoundException {
         categoryRepository.findById(id).orElseThrow(() -> new CategoryNotFoundException(Integer.toString(id)));
         try {

@@ -15,27 +15,26 @@ public class PhotoService {
     @Autowired
     private PhotoRepository photoRepository;
 
+    //INDEX
     public List<Photo> getAllPhotos() {
         return photoRepository.findAll(Sort.by("id"));
     }
 
-<<<<<<< HEAD
     public List<Photo> getAllVisiblePhotos() {
         return photoRepository.findByVisibleTrue();
     }
 
+    //RESEARCH
+        // for back-end
     public List<Photo> getFilteredPhotos(String keyword) {
         return photoRepository.findByTitleContainingIgnoreCase(keyword);
     }
+        // for front-end
     public List<Photo> getAllFilteredVisiblePhotos(String keyword){
-        return photoRepository.findByTitleContainingIgnoreCaseAndVisibleTrue(keyword);
+            return photoRepository.findByTitleContainingIgnoreCaseAndVisibleTrue(keyword);
     }
-=======
-    public List<Photo> getFilteredPhotos(String keyword) {
-        return photoRepository.findByTitleContainingIgnoreCase(keyword);
-    }
->>>>>>> origin/master
 
+    //SHOW
     public Photo getById(Integer id) throws PhotoNotFoundException {
         Optional<Photo> result = photoRepository.findById(id);
         if (result.isPresent()) {
@@ -45,6 +44,7 @@ public class PhotoService {
         }
     }
 
+    //CREATE
     public Photo createPhoto(Photo formPhoto) {
         Photo photoToPersist = new Photo();
         photoToPersist.setTitle(formPhoto.getTitle());
@@ -55,6 +55,7 @@ public class PhotoService {
         return photoRepository.save(photoToPersist);
     }
 
+    //EDIT
     public Photo updatePhoto(Photo formPhoto, Integer id) throws PhotoNotFoundException {
         Photo photoToUpdate = getById(id);
         photoToUpdate.setTitle(formPhoto.getTitle());
@@ -65,6 +66,7 @@ public class PhotoService {
         return photoRepository.save(photoToUpdate);
     }
 
+    //DELETE
     public boolean deleteById(Integer id) throws PhotoNotFoundException {
         photoRepository.findById(id).orElseThrow(() -> new PhotoNotFoundException(Integer.toString(id)));
         try {
@@ -74,7 +76,6 @@ public class PhotoService {
             return false;
         }
     }
-<<<<<<< HEAD
 
 
 
@@ -82,7 +83,3 @@ public class PhotoService {
 
 
 }
-
-=======
-}
->>>>>>> origin/master

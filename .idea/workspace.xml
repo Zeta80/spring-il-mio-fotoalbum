@@ -4,16 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea05a3c2-4943-46ab-b4a3-0b85aab43260" name="Changes" comment="ADD category crud">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/model/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/model/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/security/DatabaseUserDetailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/security/DatabaseUserDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/security/SecurityConfiguration.java" afterDir="false" />
+    <list default="true" id="b37361de-d67a-46ef-b7bf-380f89cd70be" name="Changes" comment="PUSH api and mailbox">
+      <change afterPath="$PROJECT_DIR$/frontend/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/api/MailboxRestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/mailbox/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/mailbox/show.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/model/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/api/PhotoRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/api/PhotoRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/controller/MailboxMessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/controller/MailboxMessageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/controller/PhotoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/controller/PhotoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/model/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/model/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/model/CrudMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/model/CrudMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/model/MailboxMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/model/MailboxMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/model/Photo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/model/Photo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/repository/MailboxMessageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/repository/MailboxMessageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/repository/PhotoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/repository/PhotoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/security/DatabaseUserDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/security/DatabaseUserDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/security/DatabaseUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/security/DatabaseUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/service/MailboxMessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/service/MailboxMessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/service/PhotoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/service/PhotoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/import.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/categories/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/categories/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/photos/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/photos/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/photos/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/photos/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/photos/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/photos/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/photos/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/photos/show.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,15 +47,6 @@
   </component>
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTML File" />
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -41,12 +57,16 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="mavenHome" value="Use Maven wrapper" />
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
-  <component name="ProjectId" id="2OMgpOgcT40jro76QBFHbrAn6rh" />
+  <component name="ProjectId" id="2OQ8icG00bbDZksqgYujSXK31SN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -56,71 +76,46 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "G:/boolean precorso/CORSO BOOLEAN JAVA/spring-il-mio-fotoalbum-2",
+    "last_opened_file_path": "G:/boolean precorso/CORSO BOOLEAN JAVA/spring-il-mio-fotoalbum-master",
     "settings.editor.selected.configurable": "project.propCompiler"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\boolean precorso\CORSO BOOLEAN JAVA\spring-il-mio-fotoalbum-2\src\main\resources\templates" />
-    </key>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ea05a3c2-4943-46ab-b4a3-0b85aab43260" name="Changes" comment="" />
-      <created>1681376049812</created>
+      <changelist id="b37361de-d67a-46ef-b7bf-380f89cd70be" name="Changes" comment="" />
+      <created>1681481574308</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1681376049812</updated>
+      <updated>1681481574308</updated>
     </task>
-    <task id="LOCAL-00001" summary="init with photo e catogory">
-      <created>1681379001537</created>
+    <task id="LOCAL-00001" summary="TOTAL Refacturing">
+      <created>1681483603615</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1681379001537</updated>
+      <updated>1681483603615</updated>
     </task>
-    <task id="LOCAL-00002" summary="ADD many to many">
-      <created>1681380027016</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1681380027016</updated>
-    </task>
-    <task id="LOCAL-00003" summary="ADD index show">
-      <created>1681393688055</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1681393688055</updated>
-    </task>
-    <task id="LOCAL-00004" summary="ADD complete crud">
-      <created>1681462062851</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1681462062851</updated>
-    </task>
-    <task id="LOCAL-00005" summary="ADD category crud">
-      <created>1681468851138</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1681468851138</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="init with photo e catogory" />
-    <MESSAGE value="ADD many to many" />
-    <MESSAGE value="ADD index show" />
-    <MESSAGE value="ADD complete crud" />
-    <MESSAGE value="ADD category crud" />
-    <option name="LAST_COMMIT_MESSAGE" value="ADD category crud" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="TOTAL Refacturing" />
+    <option name="LAST_COMMIT_MESSAGE" value="TOTAL Refacturing" />
   </component>
 </project>

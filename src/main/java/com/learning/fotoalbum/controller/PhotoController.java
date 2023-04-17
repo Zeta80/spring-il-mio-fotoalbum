@@ -34,6 +34,7 @@ public class PhotoController {
     @Autowired
     private UserRepository userRepository;
 
+     //INDEX
     @GetMapping
     public String index(Model model, @RequestParam(name = "keyword") Optional<String> keyword, Authentication authentication) {
 
@@ -51,6 +52,7 @@ public class PhotoController {
         return "photos/index";
     }
 
+    //SHOW
     @GetMapping("/{photoId}")
     public String show(@PathVariable("photoId") Integer id, Model model) {
         try {
@@ -62,10 +64,10 @@ public class PhotoController {
         }
     }
 
+    //CREATE
     @GetMapping("/create")
     public String create(Model model){
         model.addAttribute("photo", new Photo());
-        //associo al model di photo un attributo Listacategoria con tutte le categorie prese dal metodo getAll nel service
         model.addAttribute("categoryList", categoryService.getAll());
         return "/photos/create";
     }
@@ -73,7 +75,6 @@ public class PhotoController {
     @PostMapping("/create")
     public String doCreate(@Valid @ModelAttribute("photo") Photo formPhoto, BindingResult br, RedirectAttributes redirectAttributes, Model model){
         if(br.hasErrors()){
-            //per far lasciare i campi selezionati in caso di altri campi con errore e ricaricamento pagina
             model.addAttribute("categoryList", categoryService.getAll());
             return "/photos/create";
         }
@@ -82,6 +83,8 @@ public class PhotoController {
         return "redirect:/photos";
     }
 
+    //EDIT
+
     @GetMapping("/edit/{id}")
     public String edit(@PathVariable Integer id, Model model) {
         try {
@@ -89,7 +92,7 @@ public class PhotoController {
             model.addAttribute("photo", photo);
             model.addAttribute("categoryList", categoryService.getAll());
 
-            return "/photos/create"; //edit and create use the same template
+            return "/photos/create";
         } catch (PhotoNotFoundException e) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Photo with id '" + id + "' not found");
         }
@@ -100,7 +103,7 @@ public class PhotoController {
         if(bs.hasErrors()){
             System.out.println(bs);
             model.addAttribute("categoryList", categoryService.getAll());
-            return "/photos/create"; //edit and create use the same template
+            return "/photos/create";
         }try{
             Photo updatedPhoto = photoService.updatePhoto(formPhoto, id);
             redirectAttributes.addFlashAttribute("message", new CrudMessage(CrudMessage.CrudMessageType.SUCCESS, "Photo " + id + " successfully updated"));
@@ -111,6 +114,7 @@ public class PhotoController {
         }
     }
 
+    //DELETE
     @GetMapping("/delete/{id}")
     public String delete(@PathVariable Integer id, RedirectAttributes redirectAttributes){
         try{
@@ -121,8 +125,7 @@ public class PhotoController {
                 redirectAttributes.addFlashAttribute("message", new CrudMessage(CrudMessage.CrudMessageType.ERROR, "Photo '" + id + "' can NOT be deleted"));
             }
         }catch(PhotoNotFoundException e){
-               /* throw new ResponseStatusException(HttpStatus.NOT_FOUND);
-                anzichè lanciare eccezione mandiamo un messaggio più userfriendly*/
+
             redirectAttributes.addFlashAttribute("message", new CrudMessage(CrudMessage.CrudMessageType.ERROR, "Photo " + id + " can NOT be deleted, because doesn't exist"));
         }
         return "redirect:/photos";

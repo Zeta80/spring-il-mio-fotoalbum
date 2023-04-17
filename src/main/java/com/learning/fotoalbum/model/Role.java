@@ -9,11 +9,14 @@ import jakarta.persistence.Table;
 @Table(name = "roles")
 public class Role {
 
+    //ATTRIBUTES / COLUMNS
     @Id
     private Integer id;
     @Column(nullable = false, unique = true)
     private String name;
 
+
+    //GETTER & SETTER
 
     public Integer getId() {
         return id;

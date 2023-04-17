@@ -11,6 +11,8 @@ import java.util.List;
 @Entity
 @Table(name= "photos")
 public class Photo {
+
+    //ATTRIBUTES / COLUMNS
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -30,12 +32,15 @@ public class Photo {
     @NotNull(message = "Need to make a choice :(")
     private boolean visible;
 
+    //RELATIONS
     @ManyToMany
     @JoinTable(
             name = "photos_categories",
             joinColumns = @JoinColumn(name = "photo_id"),
             inverseJoinColumns = @JoinColumn(name = "category_id"))
     private List<Category> categories;
+
+    //GETTER & SETTER
 
     public Integer getId() {
         return id;

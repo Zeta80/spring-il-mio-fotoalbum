@@ -42,12 +42,12 @@ public class CategoryController {
         return "redirect:/categories";
     }
 
+    //EDIT
     @GetMapping("/edit/{id}")
     public String edit(@PathVariable Integer id, Model model) {
         Category category = categoryService.getById(id);
         model.addAttribute("category", category);
         model.addAttribute("categories", categoryService.getAll());
-        //gli passo anche allCategories per far vedere la lista delle categorie attualmente presenti mentre modifico
         model.addAttribute("allCategories", categoryService.getAll());
 
         return "categories/index";
@@ -67,12 +67,13 @@ public class CategoryController {
         return "redirect:/categories";
     }
 
+    //DELETE
     @GetMapping("/delete/{id}")
     public String delete(@PathVariable Integer id, RedirectAttributes redirectAttributes) {
         if(categoryService.deleteById(id)){
             redirectAttributes.addFlashAttribute("message", new CrudMessage(CrudMessage.CrudMessageType.SUCCESS, "Category successfully deleted"));
         }else{
-            redirectAttributes.addFlashAttribute("message", new CrudMessage(CrudMessage.CrudMessageType.ERROR, "Cannot delete this category because is currently used in a photo"));
+            redirectAttributes.addFlashAttribute("message", new CrudMessage(CrudMessage.CrudMessageType.ERROR, "Cannot delete this category because is currently assigned to a photo"));
         }
         return "redirect:/categories";
     }

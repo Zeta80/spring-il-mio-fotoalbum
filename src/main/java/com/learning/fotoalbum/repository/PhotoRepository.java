@@ -7,11 +7,11 @@ import java.util.List;
 
 public interface PhotoRepository extends JpaRepository<Photo, Integer> {
     public List<Photo> findByTitleContainingIgnoreCase(String title);
-<<<<<<< HEAD
 
+    // JavaScript
     public List<Photo> findByVisibleTrue();
 
+    // frontend
     public List<Photo> findByTitleContainingIgnoreCaseAndVisibleTrue(String title);
-=======
->>>>>>> origin/master
+
 }

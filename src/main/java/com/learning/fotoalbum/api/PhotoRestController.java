@@ -15,6 +15,7 @@ public class PhotoRestController {
     @Autowired
     private PhotoService photoService;
 
+    //lista parola chiave
     @GetMapping
     public List<Photo> index(@RequestParam(name = "keyword") Optional<String> search) {
         if (search.isPresent()) {
