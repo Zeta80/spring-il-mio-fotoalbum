@@ -11,8 +11,8 @@
 
     <main class="container my-4">
 
-      <h1>Photos' categories</h1>
-      <!-- leggo la variabile message (flashAttribute) -->
+      <h1>Categorie Foto</h1>
+
       <th:block th:if="${message}">
         <div th:replace="~{/fragments/message :: message}"></div>
       </th:block>
@@ -61,7 +61,7 @@
 
             <!-- description -->
             <div class="col-12">
-              <label class="form-label" for="description">Description</label>
+              <label class="form-label" for="description">Descrizione</label>
               <input type="text" id="description" class="form-control" th:field="*{description}"
                      th:errorClass="is-invalid">
               <div class="invalid-feedback" th:if="${#fields.hasErrors('description')}">

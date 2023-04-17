@@ -15,17 +15,17 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" th:href="@{/photos} " th:classAppend="${current == 'photos'} ? active : not-active">My photos</a>
+            <a class="nav-link" th:href="@{/photos} " th:classAppend="${current == 'photos'} ? active : not-active">Foto</a>
           </li>
 
          <li class="nav-item">
             <a class="nav-link" th:href="@{/categories}"
-               th:classAppend="${current == 'categories'} ? active : not-active" sec:authorize="hasAuthority('ADMIN')">Categories</a>
+               th:classAppend="${current == 'categories'} ? active : not-active" sec:authorize="hasAuthority('ADMIN')">Categorie</a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link" th:href="@{/mailbox}"
-               th:classAppend="${current == 'mailbox'} ? active : not-active" sec:authorize="hasAuthority('ADMIN')">Mailbox</a>
+               th:classAppend="${current == 'mailbox'} ? active : not-active" sec:authorize="hasAuthority('ADMIN')">Casella Posta</a>
           </li>
 
         </ul>

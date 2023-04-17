@@ -5,16 +5,16 @@
 
   <title>MailBox</title>
 </head>
-<body  class="bg-dark text-light">
+<body>
   <header th:replace="~{fragments/navbar :: navbar('mailbox', '', false)}"></header>
   <main class="container">
 
-    <h1>Mailbox</h1>
+    <h1>Casella Posta</h1>
 
     <div class="container py-5">
       <div class="row mb-3" th:if="${messages != null}">
         <div class="col" th:each="message : ${messages}">
-          <div class="card bg-secondary">
+          <div class="card">
             <div class="card-body">
               <h5 class="card-title" th:text="|From: ${message.email}|"></h5>
               <p th:text="|Message: ${message.content}|"></p>

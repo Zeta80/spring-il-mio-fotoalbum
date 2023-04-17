@@ -4,26 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b37361de-d67a-46ef-b7bf-380f89cd70be" name="Changes" comment="PUSH api-mailbox (domenica)">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/SpringIlMioFotoalbumApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/controller/CategoryController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/controller/HomeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/controller/PhotoController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/exeption/PhotoNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/model/Category.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/model/CrudMessage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/model/Photo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/model/Role.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/model/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/repository/CategoryRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/repository/PhotoRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/repository/UserRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/security/DatabaseUserDetails.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/security/DatabaseUserDetailsService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/security/SecurityConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/service/CategoryService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/service/PhotoService.java" beforeDir="false" />
+    <list default="true" id="b37361de-d67a-46ef-b7bf-380f89cd70be" name="Changes" comment="ADJUST">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/categories/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/categories/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mailbox/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mailbox/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +90,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681735956507</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="ADJUST">
+      <created>1681736066095</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1681736066095</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -122,6 +115,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="TOTAL Refacturing" />
     <MESSAGE value="PUSH api-mailbox (domenica)" />
-    <option name="LAST_COMMIT_MESSAGE" value="PUSH api-mailbox (domenica)" />
+    <MESSAGE value="ADJUST" />
+    <option name="LAST_COMMIT_MESSAGE" value="ADJUST" />
   </component>
 </project>
