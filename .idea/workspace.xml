@@ -4,25 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea05a3c2-4943-46ab-b4a3-0b85aab43260" name="Changes" comment="ADD security">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/api/PhotoRestController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/controller/MailboxMessageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/model/MailboxMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/repository/MailboxMessageRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/service/MailboxMessageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/security/DatabaseUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/security/DatabaseUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/security/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/lessons/springilmiofotoalbum/security/SecurityConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/import.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/import.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/categories/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/categories/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragments/navbar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/photos/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/photos/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/photos/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/photos/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/photos/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/photos/show.html" afterDir="false" />
+    <list default="true" id="ea05a3c2-4943-46ab-b4a3-0b85aab43260" name="Changes" comment="PUSH api and mailbox">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/controller/MailboxMessageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/learning/fotoalbum/controller/MailboxMessageController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +62,29 @@
       <option name="presentableId" value="Default" />
       <updated>1681481574308</updated>
     </task>
+    <task id="LOCAL-00001" summary="PUSH api and mailbox">
+      <created>1681734515814</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1681734515814</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="PUSH api and mailbox" />
+    <option name="LAST_COMMIT_MESSAGE" value="PUSH api and mailbox" />
   </component>
 </project>
