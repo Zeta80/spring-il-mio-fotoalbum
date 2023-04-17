@@ -1,66 +1,71 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
 <head>
-    <th:block th:replace="/fragments/resources :: head"></th:block>
-    <link rel="stylesheet" href="/webjars/bootstrap/5.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" th:href="@{/webjars/font-awesome/6.3.0/css/all.min.css}">
-    <title>photo</title>
+  <meta charset="UTF-8">
+
+  <div th:replace="~{fragments/link :: link}"></div>
+
+  <title>Photos</title>
 </head>
+
 <body>
+<header th:replace="~{fragments/navbar :: navbar('photos', ${keyword}, true)}"></header>
 
-<div th:replace="~{fragments/navbar :: navbar}"></div>
-<div class="container">
+<main>
+  <div class="container">
+    <h3 th:text="|Hi ${loggedUser.firstName}|"></h3>
+
     <h1>FOTO</h1>
-    <h1>Elenco Foto</h1>
 
+    <a th:href="@{/photos/create}" class="btn btn-success " title="add photo" sec:authorize="hasAuthority('ADMIN')">
+      <i class="fa-solid fa-plus"></i>
+    </a>
 
-    <h2>Aggiungere un Foto  <a th:href="@{/photos/create}" class="btn btn-success rounded-circle" title="add photo">CREAMI</a></h2>
+    <div th:replace="~{fragments/message :: message}" ></div>
 
     <table>
-        <thead>
-        <tr>
-            <th>Id</th>
-            <th>Title</th>
-            <th>Description</th>
-            <th>Image</th>
-            <th>Actions</th>
+      <thead>
+      <tr>
+        <th>Id</th>
+        <th>Titolo</th>
+        <th>Descrizione</th>
+        <th>Immagine</th>
+        <th>Azioni</th>
 
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:if="${!list.isEmpty()}" th:each="photo : ${list}" th:object="${photo}">
-            <td th:text="*{id}"></td>
-            <td th:text="*{title}"></td>
-            <td th:text="*{description}"></td>
-            <td > <img style="max-height: 50px;" th:src="*{url}" > </td>
-            <td>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:if="${!list.isEmpty()}" th:each="photo : ${list}" th:object="${photo}">
+        <td th:text="*{id}"></td>
+        <td th:text="*{title}"></td>
+        <td th:text="*{description}"></td>
+        <td style="max-height: 50px;"> <img th:src="*{url}" > </td>
+        <td>
 
-                <a th:href="@{|/photos/*{id}|}">
-                    Dettagli
-                </a>
+          <a th:href="@{|/photos/*{id}|}">
+            <i class="fa-solid fa-eye"></i>
+          </a>
 
-                <a th:href="@{|/photos/edit/*{id}|}" >
-                    <!-- sec:authorize="hasAuthority('ADMIN')" -->
-                    Edita
-                </a>
+          <a th:href="@{|/photos/edit/*{id}|}" sec:authorize="hasAuthority('ADMIN')">
+          <i class="fa-solid fa-pencil"></i>
+          </a>
 
-                <a th:href="@{|/photos/delete/*{id}|}">
-                    <!--  sec:authorize="hasAuthority('ADMIN')"   -->
-                    Cancella
-                </a>
+          <a th:href="@{|/photos/delete/*{id}|}" sec:authorize="hasAuthority('ADMIN')">
+            <i class="fa-solid fa-trash"></i>
+          </a>
 
+        </td>
 
-            </td>
-
-        </tr>
-        <tr th:if="${list.isEmpty()}">
-            <td colspan="4">nessuna foto disponibile</td>
-        </tr>
-        </tbody>
+      </tr>
+      <tr th:if="${list.isEmpty()}">
+        <td colspan="4"> Scusa, nessuna foto da mostrare</td>
+      </tr>
+      </tbody>
     </table>
-</div>
 
-
+  </div>
+</main>
 
 </body>
 </html>

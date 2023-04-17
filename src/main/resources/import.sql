@@ -12,10 +12,10 @@ INSERT INTO photo_category (photo_id, category_id) VALUES(1, 2);
 INSERT INTO photo_category (photo_id, category_id) VALUES(2, 3);
 
 INSERT INTO users (email, first_name, last_name, password) VALUES('mirko@email.it', 'Mirko', 'Robbi', '{noop}mirko');
-INSERT INTO users (email, first_name, last_name, password) VALUES('benny@email.it', 'Benedetta', 'Scattolin','{noop}benny');
+INSERT INTO users (email, first_name, last_name, password) VALUES('benny@email.it', 'Benedetta', 'Scattolin', '{noop}benny');
 
 INSERT INTO roles (id, name) VALUES(1, 'ADMIN');
 INSERT INTO roles (id, name) VALUES(2, 'USER');
 
-INSERT into users_roles(user_id, roles_id) VALUES(1, 1);
-INSERT into users_roles(user_id, roles_id) VALUES(2, 2);
+INSERT INTO users_roles(user_id, roles_id) VALUES (1,1);
+INSERT INTO users_roles(user_id, roles_id) VALUES (2,2);
