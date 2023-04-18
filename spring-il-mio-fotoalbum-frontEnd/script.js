@@ -97,8 +97,10 @@ const saveMessage = async (event) => {
     }
 };
 
+
 toggleForm.addEventListener('click', toggleFormVisibility);
 messageForm.addEventListener('submit', saveMessage);
 searchForm.addEventListener('submit', loadData);
 
 loadData();
+
